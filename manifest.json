@@ -1,0 +1,27 @@
+{
+	"manifest_version": 3,
+	"name": "Ad Unblocker",
+	"version": "0.1",
+
+	"description": "Aims to make the browser experience more usable.",
+	
+	"icons":{
+		"48": "icons/au-48.png"
+	},
+	
+	"browser_specific_settings": {
+    	"gecko": {
+    		"id": "ad_unblocker@burntheatlantic.com",
+    		"data_collection_permissions": {
+    			"required": ["none"]
+      		}
+   		}
+ 	},
+
+	"content_scripts":[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["unblocker.js"]
+		}
+	]
+}
